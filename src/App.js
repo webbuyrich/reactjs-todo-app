@@ -1,11 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import TodoList from './TodoList/todoList';
+import TodoItem from './TodoItem/todoItem';
+
 import './App.css';
 
 class App extends React.Component{
 
   render(){
-    return(<div>Hello from the react component.</div>)
+    return(
+      <div>
+          <TodoList></TodoList>
+          <TodoItem></TodoItem>
+      </div>)
   }
 }
 
