@@ -13,6 +13,17 @@ class App extends React.Component{
           <TodoItem></TodoItem>
       </div>)
   }
+
+  // when component is rendered and put into the DOM
+  componentDidMount = () => {
+    // see if there is anything in local storage about todos
+    const todos = localStorage.getItem('todos');
+    if(todos){
+      console.log('Had todos', todos);
+    } else{
+      console.log('No todos');
+    }
+  }
 }
 
 export default App;
