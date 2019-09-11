@@ -1,6 +1,8 @@
 import React from 'react';
 import TodoList from './TodoList/todoList';
 import TodoItem from './TodoItem/todoItem';
+import AddTodo from './AddTodo/addTodo';
+
 
 import './App.css';
 
@@ -16,9 +18,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-          {
-            2 +2 
-          }
+          <AddTodo></AddTodo>
       </div>
       );
   }
