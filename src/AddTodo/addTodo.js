@@ -33,6 +33,7 @@ class AddTodo extends React.Component{
  		// prevents form from refreshing the page on submission
  		e.preventDefault();
  		console.log('submit', this.state);
+ 		this.props.addTodoFn(this.state.todo);
  	}
 
 }
