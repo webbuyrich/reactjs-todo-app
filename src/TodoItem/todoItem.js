@@ -4,9 +4,9 @@ class TodoItem extends React.Component{
 
  	render(){
  		const { todo } = this.props;
- 		
+
  		return(
- 			<div>{todo}</div>
+ 			<div>{todo.text}</div>
  		)
  	}
 

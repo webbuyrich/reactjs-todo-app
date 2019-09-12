@@ -41,7 +41,11 @@ class App extends React.Component{
   // asynchronous function must have await before setting item in function
   // will add have all current todos plus any new todo
   addTodo = async (todo) => {
-    await this.setState({ todos: [...this.state.todos, todo]});
+    // setting state of todos and object of todo
+    await this.setState({ todos: [...this.state.todos, {
+      text: todo,
+      completed: false
+    }]});
     // this will now run after state to update and save into local storage
     // since todos is an object, must convert to string using JSON.stringify
     localStorage.setItem('todos', JSON.stringify(this.state.todos));
