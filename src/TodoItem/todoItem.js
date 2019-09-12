@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 class TodoItem extends React.Component{
 
@@ -8,7 +9,8 @@ class TodoItem extends React.Component{
 
  		return(
  			// run toggleTodo function when clicked
- 			<div onClick={this.toggleTodo}>{todo.text}</div>
+ 			// add condtional class depending on if item is complted
+ 			<div className={'todoItem' + (todo.completed ? ' completed' : '')} onClick={this.toggleTodo}>{todo.text}</div>
  		)
  	}
 
