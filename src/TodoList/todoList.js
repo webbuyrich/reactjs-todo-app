@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoItem from '../TodoItem/todoItem';
 
 class TodoList extends React.Component{
 
@@ -13,7 +14,8 @@ class TodoList extends React.Component{
  					// iterate or map through all todos, with an index
  					todos.map((_todo, _index) =>{
  						return(
- 							<div key={_index}>{_todo}</div>
+ 							//return a div with the key and todo from the map
+ 							<TodoItem key={_index} todo={_todo}></TodoItem>
  						)
  					})
  				}
