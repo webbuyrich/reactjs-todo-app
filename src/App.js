@@ -53,7 +53,7 @@ class App extends React.Component{
   }
 
   // function will be passed to TodoList
-  updateTodo = (todo) =>{
+  updateTodo = async (todo) =>{
     const newTodos = this.state.todos.map(_todo => {
       if(todo === _todo)
         return{
@@ -63,8 +63,8 @@ class App extends React.Component{
       else 
         return _todo  
     });
-    this.setState({ todos: newTodos });
-    console.log(newTodos);
+    await this.setState({ todos: newTodos });
+    localStorage.setItem('todos', JSON.stringify(this.state.todos));
   }
 
 }
